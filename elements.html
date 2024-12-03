@@ -244,9 +244,28 @@
 			</div>
 
 		<!-- Scripts -->
-			<script>
-				
-			</script>
+			
+				 <script>
+    				document.getElementById('recycleForm').addEventListener('submit', async (event) => {
+      				event.preventDefault();
+
+      // Obtener los datos del formulario
+      				const correo = document.getElementById('correo').value;
+      				const material = parseFloat(document.getElementById('material').value);
+      				const cantidad = parseInt(document.getElementById('cantidad').value);
+      				const puntos = material * cantidad;
+
+      // Enviar los datos a PHP mediante fetch
+      				const response = await fetch('api.php', {
+        			method: 'POST',
+        			headers: { 'Content-Type': 'application/json' },
+        			body: JSON.stringify({ correo, puntos })
+      				});
+
+      				const result = await response.json();
+      				document.getElementById('response').innerText = result.message;
+    				});
+  				</script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>

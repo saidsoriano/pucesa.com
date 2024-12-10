@@ -64,15 +64,74 @@
 									  <br>
 									  
 
-									<h2><a >De reciduos<br />
-									a recursos</a></h2>
-									<p>los materiales reciclados se convierten en nuevos productos, 
-										como botellas de plástico transformadas en ropa o 
-										papel reciclado convertido en cuadernos.</p>
-								</header>
-								
-								  
-								
+									<!-- Contenedor principal -->
+									<div class="contenedor">
+										<!-- Título y descripción -->
+										<header>
+											<h2><a>De reciduos<br>a recursos</a></h2>
+											<p>Los materiales reciclados se convierten en nuevos productos, 
+												como botellas de plástico transformadas en ropa o 
+												papel reciclado convertido en cuadernos.
+											</p>
+										</header>
+										
+
+										<!-- Imagen -->
+										<div class="sticker">
+											<img src="images/img_reciclaje_ojos.png" alt="Recompensas por reciclar" class="imagen">
+										</div>
+									</div>
+
+									<!-- CSS -->
+									<style>
+										.contenedor {
+											display: flex;
+											align-items: center;
+											justify-content: space-between;
+											flex-wrap: wrap; /* Para adaptarse en pantallas pequeñas */
+										}
+
+										header {
+											flex: 1; /* Ocupa todo el espacio disponible */
+											max-width: 600%; /* Controla el ancho del texto */
+										}
+
+										.sticker {
+											flex-shrink: 0; /* Evita que la imagen se reduzca */
+											margin-left: 20px; /* Espacio a la izquierda de la imagen */
+										}
+
+										.imagen {
+											width: 190px; /* Tamaño inicial de la imagen */
+											max-width: 100%; /* Escala para pantallas más pequeñas */
+											border-radius: 50%; /* Da efecto de sticker redondeado */
+											box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para estilo de sticker */
+										}
+
+										/* Responsivo para pantallas pequeñas */
+										@media (max-width: 768px) {
+											.contenedor {
+												flex-direction: column; /* Cambia a columna */
+												align-items: center; /* Centra los elementos */
+											}
+
+											header {
+												max-width: 100%; /* Ancho completo */
+												text-align: center; /* Centra el texto */
+											}
+
+											.sticker {
+												margin-left: 0; /* Sin margen a la izquierda */
+												margin-top: 20px; /* Espacio adicional arriba */
+											}
+
+											.imagen {
+												width: 120px; /* Imagen más pequeña en pantallas pequeñas */
+											}
+										}
+									</style>
+
+									<a href="https://http://127.0.0.1:5500/html5up-massively/elements.html/" class="button">!Gana premios reciclando¡</a>
 								
 							</article>
 
